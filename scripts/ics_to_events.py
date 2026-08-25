@@ -140,6 +140,19 @@ def main():
     if not events:
         sys.exit("Parsed 0 events — refusing to overwrite events.json. "
                  "Check that the calendar is public and the ICS URL is right.")
+    # Preserve past events already in events.json that the feed doesn't carry,
+    # so performance history accumulates even if old calendar entries are removed.
+    try:
+        with open(OUT, encoding="utf-8") as f:
+            existing = json.load(f)
+    except (OSError, ValueError):
+        existing = []
+    today = datetime.now(LOCAL_TZ).strftime("%Y-%m-%d")
+    seen = {(e["date"], e["title"].strip().lower()) for e in events}
+    for e in existing:
+        if e.get("date", "") < today and (e["date"], e.get("title", "").strip().lower()) not in seen:
+            events.append(e)
+    events.sort(key=lambda e: e["date"], reverse=True)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(events, f, indent=2, ensure_ascii=False)
         f.write("\n")

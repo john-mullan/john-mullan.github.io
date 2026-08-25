@@ -21,11 +21,16 @@ Three ways, from most to least automatic:
 
 1. **Google Calendar sync (once configured).** The workflow in
    `.github/workflows/update-schedule.yml` runs nightly, reads the public ICS
-   feed of the Gigs calendar (repository secret `GIGS_ICS_URL`), rewrites
-   `events.json`, and commits if anything changed. Add a gig to the calendar;
-   the site follows by the next morning. Run it immediately anytime from the
-   repo's **Actions** tab → *Update schedule from Google Calendar* → *Run
-   workflow*.
+   feed of the dedicated **Website** calendar (repository secret
+   `WEBSITE_ICS_URL`), rewrites `events.json`, and commits if anything
+   changed. Copy a gig onto the Website calendar (open the event → ⋮ →
+   *Copy to Website*) and the site follows by the next morning. Run it
+   immediately anytime from the repo's **Actions** tab → *Update schedule
+   from Google Calendar* → *Run workflow*.
+
+   Past events already in `events.json` are preserved even when they drop
+   off the calendar feed, so performance history accumulates automatically —
+   only future events need curating.
 
    Calendar entry conventions (each line optional, in the event description):
 

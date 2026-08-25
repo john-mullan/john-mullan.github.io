@@ -17,7 +17,7 @@ jobs:
           python-version: "3.12"
       - name: Regenerate events.json
         env:
-          ICS_URL: ${{ secrets.GIGS_ICS_URL }}
+          ICS_URL: ${{ secrets.WEBSITE_ICS_URL }}
         run: python scripts/ics_to_events.py
       - name: Commit and push if changed
         run: |
