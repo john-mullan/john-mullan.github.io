@@ -195,6 +195,7 @@
     height: 1.2rem;
     cursor: pointer;
     min-width: 4rem;
+    touch-action: none;
   }
   .rec-progress .track, .rec-progress .fill {
     position: absolute;
@@ -510,10 +511,17 @@
       audio.currentTime = Math.min(Math.max(t, 0), audio.duration);
       paint();
     };
-    slider.addEventListener("pointerdown", ev => {
-      if (!audio.duration) return;
+    const seekFromPointer = ev => {
       const rect = slider.getBoundingClientRect();
       seekTo((ev.clientX - rect.left) / rect.width * audio.duration);
+    };
+    slider.addEventListener("pointerdown", ev => {
+      if (!audio.duration) return;
+      try { slider.setPointerCapture(ev.pointerId); } catch (e) {}
+      seekFromPointer(ev);
+    });
+    slider.addEventListener("pointermove", ev => {
+      if (audio.duration && slider.hasPointerCapture(ev.pointerId)) seekFromPointer(ev);
     });
     slider.addEventListener("keydown", ev => {
       if (!audio.duration) return;
