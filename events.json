@@ -1,0 +1,123 @@
+[
+  {
+    "date": "2026-10-04",
+    "time": "5:00 pm",
+    "title": "Fall Concert",
+    "ensemble": "D.C. Singer Collective",
+    "venue": "St. John’s, Georgetown"
+  },
+  {
+    "date": "2026-10-17",
+    "time": "7:30 pm",
+    "title": "Concert Tour",
+    "ensemble": "Ars Populi",
+    "venue": "Lexington, KY"
+  },
+  {
+    "date": "2026-11-02",
+    "time": "7:00 pm",
+    "title": "All Souls Concert",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "ensembleUrl": "https://www.nationalshrine.org",
+    "venue": "Basilica of the National Shrine, Washington, D.C."
+  },
+  {
+    "date": "2026-11-14",
+    "time": "2:00 pm",
+    "title": "Concert & Ensemble Singing Masterclass",
+    "ensemble": "Ars Populi",
+    "venue": "George Mason University"
+  },
+  {
+    "date": "2026-12-05",
+    "time": "7:30 pm",
+    "title": "Die Weihnachtsgeschichte",
+    "ensemble": "Pandora’s Box",
+    "venue": "Touring program"
+  },
+  {
+    "date": "2026-12-12",
+    "time": "7:30 pm",
+    "title": "Holiday Concert",
+    "ensemble": "Ars Populi",
+    "venue": "Cathedral of the Sacred Heart, Richmond"
+  },
+  {
+    "date": "2026-12-20",
+    "time": "4:00 pm",
+    "title": "Holiday Concert",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "ensembleUrl": "https://www.nationalshrine.org",
+    "venue": "Basilica of the National Shrine, Washington, D.C."
+  },
+  {
+    "date": "2027-02-13",
+    "time": "7:30 pm",
+    "title": "Joint Concert with Siglo de Oro",
+    "ensemble": "Ars Populi",
+    "venue": "St. John’s, Georgetown"
+  },
+  {
+    "date": "2027-03-06",
+    "time": "7:30 pm",
+    "title": "Figure Humaine",
+    "ensemble": "Pandora’s Box",
+    "venue": "Touring program"
+  },
+  {
+    "date": "2027-03-26",
+    "time": "7:00 pm",
+    "title": "St. Matthew Passion",
+    "ensemble": "The Thirteen",
+    "ensembleUrl": "https://www.thethirteenchoir.org",
+    "venue": "Washington National Cathedral",
+    "url": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2027-04-10",
+    "time": "7:30 pm",
+    "title": "Robert White Lamentations",
+    "ensemble": "Ars Populi",
+    "venue": "Emmanuel Episcopal, Baltimore"
+  },
+  {
+    "date": "2027-07-03",
+    "time": "7:30 pm",
+    "title": "America 250",
+    "ensemble": "Ars Populi",
+    "venue": "Alden Theatre, McLean"
+  },
+  {
+    "date": "2026-05-09",
+    "title": "Un Soir de Neige",
+    "ensemble": "Ars Populi",
+    "venue": "Touring program"
+  },
+  {
+    "date": "2026-04-18",
+    "title": "Monteverdi Refracted",
+    "ensemble": "The Thirteen",
+    "ensembleUrl": "https://www.thethirteenchoir.org",
+    "venue": "Touring program"
+  },
+  {
+    "date": "2025-12-21",
+    "title": "Messiah (Handel)",
+    "ensemble": "Washington National Cathedral Choir",
+    "ensembleUrl": "https://cathedral.org",
+    "venue": "Washington National Cathedral"
+  },
+  {
+    "date": "2025-12-13",
+    "title": "Follow the Star",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "ensembleUrl": "https://www.nationalshrine.org",
+    "venue": "Basilica of the National Shrine, Washington, D.C."
+  },
+  {
+    "date": "2025-05-04",
+    "title": "Palestrina 500",
+    "ensemble": "D.C. Singer Collective",
+    "venue": "St. Bernadette’s, Silver Spring"
+  }
+]

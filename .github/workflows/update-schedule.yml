@@ -1,0 +1,27 @@
+name: Update schedule from Google Calendar
+
+on:
+  schedule:
+    - cron: "23 9 * * *"   # daily, 09:23 UTC (early morning US Eastern)
+  workflow_dispatch: {}     # allows manual "Run workflow" from the Actions tab
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Regenerate events.json
+        env:
+          ICS_URL: ${{ secrets.GIGS_ICS_URL }}
+        run: python scripts/ics_to_events.py
+      - name: Commit and push if changed
+        run: |
+          git config user.name "schedule-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add events.json
+          git diff --cached --quiet || { git commit -m "Update schedule from calendar"; git push; }

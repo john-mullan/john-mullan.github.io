@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>John W. Mullan, tenor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="John W. Mullan is a tenor based in Washington, D.C. — biography, recordings, and upcoming performances.">
+<meta property="og:title" content="John W. Mullan, tenor">
+<meta property="og:description" content="Biography, recordings, and upcoming performances.">
+<meta property="og:image" content="img/headshot.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🎼</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<style>
+  :root {
+    --paper: #FCFAF7;
+    --ink: #2A2320;
+    --ink-soft: #6E625B;
+    --wine: #6E1F2E;
+    --wine-soft: #8C4451;
+    --hairline: #E3DAD2;
+    --hairline-strong: #6E1F2E;
+    --card: #F7F2EC;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #201B19;
+      --ink: #E9E1D8;
+      --ink-soft: #A79A90;
+      --wine: #D69AA3;
+      --wine-soft: #B57E88;
+      --hairline: #3B332F;
+      --hairline-strong: #D69AA3;
+      --card: #292321;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #201B19;
+    --ink: #E9E1D8;
+    --ink-soft: #A79A90;
+    --wine: #D69AA3;
+    --wine-soft: #B57E88;
+    --hairline: #3B332F;
+    --hairline-strong: #D69AA3;
+    --card: #292321;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+    font-size: 1.1rem;
+    line-height: 1.55;
+  }
+  .page {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  /* interactive text: one convention everywhere */
+  a, .toggle-past {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--wine-soft);
+  }
+  a { color: var(--wine); }
+  a:hover, a:focus-visible { text-decoration-color: var(--wine); }
+  a:focus-visible, .player button:focus-visible, .toggle-past:focus-visible, .rec-progress:focus-visible {
+    outline: 2px solid var(--wine);
+    outline-offset: 3px;
+  }
+
+  /* ---------- header ---------- */
+  header {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    flex-wrap: wrap;
+  }
+  .headshot {
+    width: 10.5rem;
+    height: 10.5rem;
+    border-radius: 50%;
+    display: block;
+    flex: none;
+  }
+  .masthead h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    text-wrap: balance;
+  }
+  .masthead .role {
+    font-style: italic;
+    color: var(--wine);
+    font-size: 1.35rem;
+    margin-top: 0.15rem;
+  }
+  nav {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    padding: 0.35rem 0;
+  }
+  nav a {
+    font-variant: small-caps;
+    letter-spacing: 0.14em;
+    text-transform: lowercase;
+    font-size: 1.02rem;
+    color: var(--ink);
+    padding: 0.55rem 0.2rem;
+    text-decoration-color: transparent;
+  }
+  nav a:hover, nav a:focus-visible { color: var(--wine); text-decoration-color: var(--wine); }
+  nav .pipe { color: var(--wine); }
+
+  /* ---------- sections ---------- */
+  section { margin-top: 3.25rem; }
+  h2 {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: 0.13em;
+    color: var(--wine);
+    padding-bottom: 0.35rem;
+    border-bottom: 1.5px solid var(--hairline-strong);
+    margin-bottom: 1.4rem;
+  }
+  .bio p { max-width: 62ch; }
+  .bio p + p { margin-top: 1em; }
+  .pipe { color: var(--wine); }
+
+  /* ---------- recordings ---------- */
+  .rec-list { display: flex; flex-direction: column; }
+  .player {
+    display: grid;
+    grid-template-columns: auto 1fr minmax(11rem, 15rem);
+    align-items: center;
+    gap: 0.4rem 1.1rem;
+    padding: 0.9rem 0.6rem;
+    margin: 0 -0.6rem;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .rec-list .player:last-child { border-bottom: none; }
+  .player.playing { background: var(--card); }
+  .player button {
+    flex: none;
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    border: 1.5px solid var(--wine);
+    background: transparent;
+    color: var(--wine);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    position: relative;
+    transition: background-color 120ms ease, color 120ms ease;
+  }
+  .player button:hover:not(:disabled) { background: var(--wine); color: var(--paper); }
+  .player button:disabled { border-color: var(--hairline); color: var(--ink-soft); cursor: default; }
+  .player svg { width: 1.05rem; height: 1.05rem; display: block; }
+  .player.loading button svg { opacity: 0; }
+  .player.loading button::after {
+    content: "";
+    position: absolute;
+    inset: 0.55rem;
+    border: 1.5px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .rec-meta { min-width: 0; }
+  .rec-title { font-style: italic; font-size: 1.18rem; }
+  .rec-sub { color: var(--ink-soft); font-size: 1rem; }
+  .rec-ctrl { display: flex; align-items: center; gap: 0.8rem; min-width: 0; }
+  .rec-progress {
+    position: relative;
+    flex: 1 1 auto;
+    height: 1.2rem;
+    cursor: pointer;
+    min-width: 4rem;
+  }
+  .rec-progress .track, .rec-progress .fill {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 3px;
+    left: 0;
+  }
+  .rec-progress .track { right: 0; background: var(--hairline); }
+  .rec-progress .fill { width: 0%; background: var(--wine); }
+  .rec-progress .thumb {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: var(--wine);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 120ms ease;
+  }
+  .rec-progress:hover .thumb,
+  .rec-progress:focus-visible .thumb,
+  .player.playing .thumb { opacity: 1; }
+  .rec-time {
+    flex: none;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    font-variant-numeric: tabular-nums;
+    min-width: 5.4ch;
+    text-align: right;
+  }
+  
+
+  /* ---------- schedule ---------- */
+  .events { display: flex; flex-direction: column; }
+  .event {
+    display: grid;
+    grid-template-columns: 7.2rem 1fr;
+    gap: 0.35rem 1.4rem;
+    padding: 0.9rem 0.25rem;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .events .event:last-child { border-bottom: none; }
+  .ev-date {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 0.07em;
+    color: var(--wine);
+    line-height: 1.35;
+    padding-top: 0.1rem;
+  }
+  .ev-time {
+    font-variant: normal;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+  .ev-title { font-style: italic; font-size: 1.18rem; }
+  .ev-detail { grid-column: 2; color: var(--ink-soft); font-size: 1rem; }
+  .ev-detail a { font-size: inherit; }
+  .events-empty { color: var(--ink-soft); font-style: italic; }
+  .past-wrap { display: none; }
+  .past-wrap.open { display: block; }
+  .toggle-past {
+    margin-top: 0.9rem;
+    background: none;
+    border: none;
+    padding: 0.55rem 0;
+    font: inherit;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 0.12em;
+    color: var(--wine);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+  .toggle-past .chev { width: 0.7rem; height: 0.7rem; transition: transform 150ms ease; }
+  .toggle-past[aria-expanded="true"] .chev { transform: rotate(180deg); }
+  .past-label {
+    margin-top: 1.4rem;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
+  }
+
+  /* ---------- contact + footer ---------- */
+  .contact p + p { margin-top: 0.6em; }
+  footer {
+    margin-top: 3.25rem;
+    border-top: 1px solid var(--hairline);
+    padding-top: 1.3rem;
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+  }
+  footer p + p { margin-top: 0.35em; }
+
+  @media (max-width: 600px) {
+    .page { padding-top: 2.25rem; }
+    header { justify-content: center; text-align: center; gap: 1.4rem; }
+    .headshot { width: 8.5rem; height: 8.5rem; }
+    .masthead h1 { font-size: 2.3rem; }
+    .player { grid-template-columns: auto 1fr; }
+    .rec-ctrl { grid-column: 1 / -1; }
+    .event { grid-template-columns: 1fr; gap: 0.15rem; }
+    .ev-detail { grid-column: 1; }
+    .ev-date { display: flex; align-items: baseline; gap: 0.7rem; }
+  }
+</style>
+
+</head>
+<body>
+<div class="page">
+  <header>
+    <img class="headshot" src="img/headshot.png" alt="John W. Mullan">
+    <div class="masthead">
+      <h1>John W. Mullan</h1>
+      <div class="role">tenor</div>
+    </div>
+  </header>
+
+  <nav aria-label="Sections">
+    <a href="#bio">Biography</a><span class="pipe" aria-hidden="true">|</span>
+    <a href="#recordings">Recordings</a><span class="pipe" aria-hidden="true">|</span>
+    <a href="#schedule">Schedule</a><span class="pipe" aria-hidden="true">|</span>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="bio" class="bio">
+    <h2>Biography</h2>
+    <p>John W. Mullan is a tenor based in the Washington, D.C. area, where he performs with many of the region&rsquo;s finest choral ensembles, including Ars&nbsp;Populi, the Choir of the Basilica of the National Shrine of the Immaculate Conception, The&nbsp;Thirteen, and the Washington National Cathedral Choir. His repertoire spans from Renaissance polyphony &mdash; Palestrina, Lassus, and Robert White &mdash; through the great oratorios of Bach and Handel to newly commissioned American works.</p>
+    <p>Recent seasons have included Handel&rsquo;s <em>Messiah</em> and Bach&rsquo;s <em>Magnificat</em> at Washington National Cathedral, a performance tour to Rome with the Choir of the Basilica of the National Shrine, and the premiere of a new Palestrina-inspired mass setting with Ars&nbsp;Populi. He studied at the University of Pennsylvania, where he sang with the Penn Collegium Musicum and Penn Choral Society, and currently studies voice with Elizabeth&nbsp;Daniels.</p>
+  </section>
+
+  <section id="recordings">
+    <h2>Recordings</h2>
+    <div class="rec-list">
+      <div class="player" data-src="audio/deposuit.m4a" data-title="Deposuit potentes">
+        <button type="button" aria-label="Play Deposuit potentes">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path class="ico-play" d="M3 1.5v13l11-6.5z" fill="currentColor"/><g class="ico-pause" style="display:none"><rect x="3" y="1.5" width="3.4" height="13" fill="currentColor"/><rect x="9.6" y="1.5" width="3.4" height="13" fill="currentColor"/></g></svg>
+        </button>
+        <div class="rec-meta">
+          <div class="rec-title">Deposuit potentes</div>
+          <div class="rec-sub">J.&thinsp;S. Bach&nbsp;<span class="pipe">|</span>&nbsp;Magnificat, BWV 243</div>
+        </div>
+        <div class="rec-ctrl">
+          <div class="rec-progress" role="slider" tabindex="0" aria-label="Seek in Deposuit potentes" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0"><div class="track"></div><div class="fill"></div><div class="thumb"></div></div>
+          <div class="rec-time">&ndash;:&ndash;&ndash;</div>
+        </div>
+      </div>
+      <div class="player" data-src="audio/comfort-ye.m4a" data-title="Comfort Ye My People">
+        <button type="button" aria-label="Play Comfort Ye My People">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path class="ico-play" d="M3 1.5v13l11-6.5z" fill="currentColor"/><g class="ico-pause" style="display:none"><rect x="3" y="1.5" width="3.4" height="13" fill="currentColor"/><rect x="9.6" y="1.5" width="3.4" height="13" fill="currentColor"/></g></svg>
+        </button>
+        <div class="rec-meta">
+          <div class="rec-title">Comfort Ye My People</div>
+          <div class="rec-sub">G.&thinsp;F. Handel&nbsp;<span class="pipe">|</span>&nbsp;Messiah, HWV 56</div>
+        </div>
+        <div class="rec-ctrl">
+          <div class="rec-progress" role="slider" tabindex="0" aria-label="Seek in Comfort Ye My People" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0"><div class="track"></div><div class="fill"></div><div class="thumb"></div></div>
+          <div class="rec-time">&ndash;:&ndash;&ndash;</div>
+        </div>
+      </div>
+      <div class="player" data-src="audio/si-chio-vorrei-morire.m4a" data-title="Sì ch'io vorrei morire">
+        <button type="button" aria-label="Play Sì ch'io vorrei morire">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path class="ico-play" d="M3 1.5v13l11-6.5z" fill="currentColor"/><g class="ico-pause" style="display:none"><rect x="3" y="1.5" width="3.4" height="13" fill="currentColor"/><rect x="9.6" y="1.5" width="3.4" height="13" fill="currentColor"/></g></svg>
+        </button>
+        <div class="rec-meta">
+          <div class="rec-title">S&igrave; ch&rsquo;io vorrei morire</div>
+          <div class="rec-sub">C. Monteverdi&nbsp;<span class="pipe">|</span>&nbsp;Madrigals, Book IV</div>
+        </div>
+        <div class="rec-ctrl">
+          <div class="rec-progress" role="slider" tabindex="0" aria-label="Seek in Sì ch'io vorrei morire" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0"><div class="track"></div><div class="fill"></div><div class="thumb"></div></div>
+          <div class="rec-time">&ndash;:&ndash;&ndash;</div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section id="schedule">
+    <h2>Schedule</h2>
+    <div class="events" id="upcoming"><p class="events-empty">Loading schedule&hellip;</p></div>
+    <button type="button" class="toggle-past" aria-expanded="false">Past performances <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    <div class="past-wrap">
+      <div class="past-label">Selected past performances</div>
+      <div class="events" id="past"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>For bookings and inquiries: <a href="mailto:jwvmullan@gmail.com">jwvmullan@gmail.com</a></p>
+    <p><a href="resume.pdf">Download performance resume (PDF)</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 John W. Mullan</p>
+  </footer>
+</div>
+
+<script>
+  /* ---------- schedule ---------- */
+  function initSchedule(events) {
+    const fmtDate = iso => {
+      const [y, m, d] = iso.split("-").map(Number);
+      return new Date(y, m - 1, d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    };
+    const now = new Date();
+    const today = now.getFullYear() + "-" +
+      String(now.getMonth() + 1).padStart(2, "0") + "-" +
+      String(now.getDate()).padStart(2, "0");
+    const sep = '&nbsp;<span class="pipe">|</span>&nbsp;';
+    const row = e => {
+      const ensemble = e.ensembleUrl ? `<a href="${e.ensembleUrl}">${e.ensemble}</a>` : e.ensemble;
+      const details = e.url ? sep + `<a href="${e.url}">Details&nbsp;&rarr;</a>` : "";
+      const time = e.time ? `<span class="ev-time">${e.time}</span>` : "";
+      return `<div class="event">
+        <div class="ev-date">${fmtDate(e.date)} ${time}</div>
+        <div class="ev-title">${e.title}</div>
+        <div class="ev-detail">${ensemble}${sep}${e.venue}${details}</div>
+      </div>`;
+    };
+    const render = (list, el, emptyMsg) => {
+      el.innerHTML = list.length ? list.map(row).join("") : `<p class="events-empty">${emptyMsg}</p>`;
+    };
+    render(events.filter(e => e.date >= today).sort((a, b) => a.date.localeCompare(b.date)),
+      document.getElementById("upcoming"), "No performances currently scheduled &mdash; check back soon.");
+    render(events.filter(e => e.date < today).sort((a, b) => b.date.localeCompare(a.date)),
+      document.getElementById("past"), "");
+  }
+  fetch("events.json").then(r => r.json()).then(initSchedule).catch(() => {
+    document.getElementById("upcoming").innerHTML = '<p class="events-empty">The schedule couldn’t be loaded — please refresh.</p>';
+  });
+
+  const toggle = document.querySelector(".toggle-past");
+  const pastWrap = document.querySelector(".past-wrap");
+  toggle.addEventListener("click", () => {
+    const open = pastWrap.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+
+  /* ---------- audio players ---------- */
+  let currentAudio = null;
+  const fmtTime = s => Math.floor(s / 60) + ":" + String(Math.floor(s % 60)).padStart(2, "0");
+  document.querySelectorAll(".player[data-src]").forEach(p => {
+    const title = p.dataset.title;
+    const audio = new Audio();
+    audio.preload = "metadata";
+    audio.src = p.dataset.src;
+    const btn = p.querySelector("button");
+    const playIco = p.querySelector(".ico-play");
+    const pauseIco = p.querySelector(".ico-pause");
+    const slider = p.querySelector(".rec-progress");
+    const fill = p.querySelector(".fill");
+    const thumb = p.querySelector(".thumb");
+    const timeEl = p.querySelector(".rec-time");
+
+    const setIcons = playing => {
+      playIco.style.display = playing ? "none" : "";
+      pauseIco.style.display = playing ? "" : "none";
+      btn.setAttribute("aria-label", (playing ? "Pause " : "Play ") + title);
+      p.classList.toggle("playing", playing);
+    };
+    const paint = () => {
+      const dur = audio.duration || 0;
+      const pct = dur ? (audio.currentTime / dur * 100) : 0;
+      fill.style.width = pct + "%";
+      thumb.style.left = pct + "%";
+      timeEl.textContent = dur ? (audio.paused && audio.currentTime === 0
+        ? fmtTime(dur)
+        : fmtTime(audio.currentTime) + " / " + fmtTime(dur)) : "–:––";
+      if (dur) {
+        slider.setAttribute("aria-valuemax", Math.round(dur));
+        slider.setAttribute("aria-valuenow", Math.round(audio.currentTime));
+        slider.setAttribute("aria-valuetext", fmtTime(audio.currentTime) + " of " + fmtTime(dur));
+      }
+    };
+
+    btn.addEventListener("click", () => {
+      if (audio.paused) {
+        if (currentAudio && currentAudio !== audio) currentAudio.pause();
+        currentAudio = audio;
+        if (audio.readyState < 3) p.classList.add("loading");
+        audio.play().catch(() => fail());
+      } else {
+        audio.pause();
+      }
+    });
+    const fail = () => {
+      p.classList.remove("loading", "playing");
+      btn.disabled = true;
+      p.querySelector(".rec-sub").textContent = "Playback isn’t working right now — please try again later.";
+    };
+    audio.addEventListener("playing", () => { p.classList.remove("loading"); setIcons(true); });
+    audio.addEventListener("pause", () => setIcons(false));
+    audio.addEventListener("ended", () => { audio.currentTime = 0; setIcons(false); paint(); });
+    audio.addEventListener("waiting", () => p.classList.add("loading"));
+    audio.addEventListener("timeupdate", paint);
+    audio.addEventListener("loadedmetadata", paint);
+    audio.addEventListener("error", fail);
+
+    const seekTo = t => {
+      if (!audio.duration) return;
+      audio.currentTime = Math.min(Math.max(t, 0), audio.duration);
+      paint();
+    };
+    slider.addEventListener("pointerdown", ev => {
+      if (!audio.duration) return;
+      const rect = slider.getBoundingClientRect();
+      seekTo((ev.clientX - rect.left) / rect.width * audio.duration);
+    });
+    slider.addEventListener("keydown", ev => {
+      if (!audio.duration) return;
+      const step = { ArrowLeft: -5, ArrowRight: 5, ArrowDown: -10, ArrowUp: 10 }[ev.key];
+      if (step !== undefined) { seekTo(audio.currentTime + step); ev.preventDefault(); }
+      else if (ev.key === "Home") { seekTo(0); ev.preventDefault(); }
+      else if (ev.key === "End") { seekTo(audio.duration - 0.5); ev.preventDefault(); }
+    });
+  });
+</script>
+
+</body>
+</html>
