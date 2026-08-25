@@ -4,6 +4,7 @@
     "time": "5:00 pm",
     "title": "Fall Concert",
     "ensemble": "D.C. Singer Collective",
+    "ensembleUrl": "https://dcsingercollective.com",
     "venue": "St. John’s, Georgetown"
   },
   {
@@ -11,6 +12,7 @@
     "time": "7:30 pm",
     "title": "Concert Tour",
     "ensemble": "Ars Populi",
+    "ensembleUrl": "https://www.ars-populi-music.com",
     "venue": "Lexington, KY"
   },
   {
@@ -26,6 +28,7 @@
     "time": "2:00 pm",
     "title": "Concert & Ensemble Singing Masterclass",
     "ensemble": "Ars Populi",
+    "ensembleUrl": "https://www.ars-populi-music.com",
     "venue": "George Mason University"
   },
   {
@@ -40,6 +43,7 @@
     "time": "7:30 pm",
     "title": "Holiday Concert",
     "ensemble": "Ars Populi",
+    "ensembleUrl": "https://www.ars-populi-music.com",
     "venue": "Cathedral of the Sacred Heart, Richmond"
   },
   {
@@ -55,6 +59,7 @@
     "time": "7:30 pm",
     "title": "Joint Concert with Siglo de Oro",
     "ensemble": "Ars Populi",
+    "ensembleUrl": "https://www.ars-populi-music.com",
     "venue": "St. John’s, Georgetown"
   },
   {
@@ -78,6 +83,7 @@
     "time": "7:30 pm",
     "title": "Robert White Lamentations",
     "ensemble": "Ars Populi",
+    "ensembleUrl": "https://www.ars-populi-music.com",
     "venue": "Emmanuel Episcopal, Baltimore"
   },
   {
@@ -85,12 +91,14 @@
     "time": "7:30 pm",
     "title": "America 250",
     "ensemble": "Ars Populi",
+    "ensembleUrl": "https://www.ars-populi-music.com",
     "venue": "Alden Theatre, McLean"
   },
   {
     "date": "2026-05-09",
     "title": "Un Soir de Neige",
     "ensemble": "Ars Populi",
+    "ensembleUrl": "https://www.ars-populi-music.com",
     "venue": "Touring program"
   },
   {
@@ -118,6 +126,7 @@
     "date": "2025-05-04",
     "title": "Palestrina 500",
     "ensemble": "D.C. Singer Collective",
+    "ensembleUrl": "https://dcsingercollective.com",
     "venue": "St. Bernadette’s, Silver Spring"
   }
 ]
