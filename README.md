@@ -49,6 +49,16 @@ Three ways, from most to least automatic:
    notification is delayed. Ensemble websites are filled from `ensembles.json`;
    `ensembleUrl:` remains available as a per-event override.
 
+   To edit many events at once, select `createBulkEditor` in Apps Script and
+   click **Run**. Open the Google Sheet URL printed in the execution log. Edit
+   the **Ensemble** and **Details URL** columns and check **Apply** for each row
+   to publish. The five-minute sweep writes checked rows back to Calendar, or
+   select `applyBulkEdits` and click **Run** for an immediate update. Calendar
+   dates, titles, and locations are shown as shaded reference columns; continue
+   editing those fields in Google Calendar. New Calendar events are added to
+   the sheet automatically, and `refreshBulkEditor` is available for a manual
+   refresh.
+
    Entries named with "not confirmed", "tentative", "hold", or "?" are skipped,
    as is any entry with a lone line "skip" or "private" in its description.
 
