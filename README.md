@@ -42,6 +42,10 @@ Three ways, from most to least automatic:
    venue: Washington National Cathedral  ← overrides the location field
    ```
 
+   Multi-day Calendar events are generated with an `endDate` and displayed as
+   a date range without a time, such as `Oct 4–6, 2026`. Single-day timed
+   events continue to show their start time.
+
    `scripts/google_calendar_scaffold.gs` installs a Google Apps Script trigger
    that automatically adds blank `ensemble:` and `details:` lines to new or
    edited events on the Website calendar, including historical events back to

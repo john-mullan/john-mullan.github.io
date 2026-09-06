@@ -516,9 +516,30 @@
 
   /* ---------- schedule ---------- */
   function initSchedule(events) {
-    const fmtDate = iso => {
+    const parseDate = iso => {
       const [y, m, d] = iso.split("-").map(Number);
-      return new Date(y, m - 1, d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+      return new Date(y, m - 1, d);
+    };
+    const fmtDate = iso => parseDate(iso).toLocaleDateString("en-US", {
+      month: "short", day: "numeric", year: "numeric"
+    });
+    const fmtDateRange = (startIso, endIso) => {
+      if (!endIso) return fmtDate(startIso);
+      const start = parseDate(startIso);
+      const end = parseDate(endIso);
+      const startMonth = start.toLocaleDateString("en-US", { month: "short" });
+      const endMonth = end.toLocaleDateString("en-US", { month: "short" });
+      const startDay = start.getDate();
+      const endDay = end.getDate();
+      const startYear = start.getFullYear();
+      const endYear = end.getFullYear();
+      if (startYear !== endYear) {
+        return `${startMonth} ${startDay}, ${startYear}&ndash;${endMonth} ${endDay}, ${endYear}`;
+      }
+      if (start.getMonth() !== end.getMonth()) {
+        return `${startMonth} ${startDay}&ndash;${endMonth} ${endDay}, ${endYear}`;
+      }
+      return `${startMonth} ${startDay}&ndash;${endDay}, ${endYear}`;
     };
     const now = new Date();
     const today = now.getFullYear() + "-" +
@@ -530,7 +551,7 @@
       const details = e.url ? sep + `<a href="${e.url}">Details&nbsp;&rarr;</a>` : "";
       const time = e.time ? `<span class="ev-time">${e.time}</span>` : "";
       return `<div class="event">
-        <div class="ev-date">${fmtDate(e.date)} ${time}</div>
+        <div class="ev-date">${fmtDateRange(e.date, e.endDate)} ${time}</div>
         <div class="ev-title">${e.title}</div>
         <div class="ev-detail">${ensemble}${sep}${e.venue}${details}</div>
       </div>`;
@@ -538,9 +559,9 @@
     const render = (list, el, emptyMsg) => {
       el.innerHTML = list.length ? list.map(row).join("") : `<p class="events-empty">${emptyMsg}</p>`;
     };
-    render(events.filter(e => e.date >= today).sort((a, b) => a.date.localeCompare(b.date)),
+    render(events.filter(e => (e.endDate || e.date) >= today).sort((a, b) => a.date.localeCompare(b.date)),
       document.getElementById("upcoming"), "No performances currently scheduled &mdash; check back soon.");
-    render(events.filter(e => e.date < today).sort((a, b) => b.date.localeCompare(a.date)),
+    render(events.filter(e => (e.endDate || e.date) < today).sort((a, b) => b.date.localeCompare(a.date)),
       document.getElementById("past"), "");
   }
   fetch("events.json").then(r => r.json()).then(initSchedule).catch(() => {

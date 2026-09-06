@@ -21,7 +21,7 @@ import os
 import re
 import sys
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 LOCAL_TZ = ZoneInfo(os.environ.get("SITE_TZ", "America/New_York"))
@@ -52,7 +52,7 @@ def unescape(value):
                  .replace("\\;", ";").replace("\\\\", "\\"))
 
 
-def parse_dtstart(params, value):
+def parse_calendar_datetime(params, value):
     if re.fullmatch(r"\d{8}", value):  # all-day
         return datetime.strptime(value, "%Y%m%d"), False
     dt = datetime.strptime(value.rstrip("Z"), "%Y%m%dT%H%M%S")
@@ -110,11 +110,29 @@ def parse_events(ics_text):
             continue
         params, value = raw["DTSTART"]
         try:
-            dt, timed = parse_dtstart(params, value)
+            dt, timed = parse_calendar_datetime(params, value)
         except ValueError:
             continue
         event = {"date": dt.strftime("%Y-%m-%d")}
-        if timed:
+
+        end_date = None
+        if "DTEND" in raw:
+            end_params, end_value = raw["DTEND"]
+            try:
+                end_dt, _ = parse_calendar_datetime(end_params, end_value)
+                # In ICS, an all-day DTEND is exclusive. Google represents an
+                # Oct. 4-6 event with DTEND on Oct. 7.
+                if not timed:
+                    end_dt -= timedelta(days=1)
+                if end_dt.date() > dt.date():
+                    end_date = end_dt.strftime("%Y-%m-%d")
+                    event["endDate"] = end_date
+            except ValueError:
+                pass
+
+        # Present multi-day engagements as date ranges without potentially
+        # misleading start times.
+        if timed and not end_date:
             event["time"] = fmt_time(dt)
         event["title"] = title
         if "LOCATION" in raw and raw["LOCATION"][1].strip():
