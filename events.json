@@ -1,1 +1,635 @@
-[]
+[
+  {
+    "date": "2027-05-02",
+    "time": "7:30 pm",
+    "title": "US in Our Time",
+    "venue": "Westmoreland Congregational United Church of Christ",
+    "ensemble": "The Thirteen",
+    "url": "https://www.thethirteenchoir.org/",
+    "ensembleUrl": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2027-05-01",
+    "time": "7:30 pm",
+    "title": "US in Our Time",
+    "venue": "St Mark's Capitol Hill",
+    "ensemble": "The Thirteen",
+    "url": "https://www.thethirteenchoir.org/",
+    "ensembleUrl": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2027-04-30",
+    "time": "7:30 pm",
+    "title": "US in Our Time",
+    "venue": "Trinity United Methodist Church",
+    "ensemble": "The Thirteen",
+    "url": "https://www.thethirteenchoir.org/",
+    "ensembleUrl": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2027-04-28",
+    "time": "7:30 pm",
+    "title": "US in Our Time",
+    "venue": "Frederick, MD",
+    "ensemble": "The Thirteen",
+    "url": "https://www.thethirteenchoir.org/",
+    "ensembleUrl": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2027-04-26",
+    "time": "7:30 pm",
+    "title": "US in Our Time",
+    "venue": "Richmond, VA",
+    "ensemble": "The Thirteen",
+    "url": "https://www.thethirteenchoir.org/",
+    "ensembleUrl": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2027-04-25",
+    "time": "4:00 pm",
+    "title": "US in Our Time",
+    "venue": "Williamsburg Presbyterian Church",
+    "ensemble": "The Thirteen",
+    "url": "https://www.thethirteenchoir.org/",
+    "ensembleUrl": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2027-04-17",
+    "time": "6:00 pm",
+    "title": "Ars Populi in Concert",
+    "venue": "St. Paul's Episcopal Church",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2027-03-21",
+    "time": "7:00 pm",
+    "title": "Holy Week Meditations",
+    "venue": "Emmanuel Episcopal Church",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2027-03-13",
+    "time": "7:30 pm",
+    "title": "St. Matthew Passion",
+    "venue": "Washington National Cathedral",
+    "ensemble": "The Thirteen",
+    "url": "https://www.thethirteenchoir.org/",
+    "ensembleUrl": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2027-02-28",
+    "time": "2:00 pm",
+    "title": "Ars Populi in Concert",
+    "venue": "Alden Theatre",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2026-12-27",
+    "time": "4:30 pm",
+    "title": "Ars Populi in Concert",
+    "venue": "Shepherdstown Presbyterian Church",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2026-12-19",
+    "time": "7:30 pm",
+    "title": "Christmas Concert",
+    "venue": "Basilica of the National Shrine of the Immaculate Conception",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2026-12-13",
+    "time": "3:00 pm",
+    "title": "Die Weihnachtsgeschichte",
+    "venue": "Westmoreland Congregational United Church of Christ",
+    "ensemble": "Pandora's Box",
+    "url": ""
+  },
+  {
+    "date": "2026-12-12",
+    "time": "7:00 pm",
+    "title": "Die Weihnachtsgeschichte",
+    "venue": "Immaculate Conception Church",
+    "ensemble": "Pandora's Box",
+    "url": ""
+  },
+  {
+    "date": "2026-12-07",
+    "time": "11:00 am",
+    "title": "Ars Populi in Concert",
+    "venue": "Cathedral of the Sacred Heart",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2026-11-22",
+    "time": "1:00 pm",
+    "title": "Ars Populi in Concert",
+    "venue": "1000 Tates Creek Rd, Lexington",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2026-11-10",
+    "time": "1:30 pm",
+    "title": "Americana",
+    "venue": "Hylton Performing Arts Center",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2026-11-08",
+    "time": "3:00 pm",
+    "title": "The Road to Ferrara",
+    "venue": "St. John's Episcopal Church, Georgetown",
+    "ensemble": "D.C. Singer Collective",
+    "url": "https://dcsingercollective.com/",
+    "ensembleUrl": "https://dcsingercollective.com"
+  },
+  {
+    "date": "2026-11-02",
+    "time": "6:00 pm",
+    "title": "All Souls Concert",
+    "venue": "Basilica of the National Shrine of the Immaculate Conception",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2026-09-15",
+    "endDate": "2026-09-17",
+    "title": "Album Recording Session",
+    "venue": "Basilica of the National Shrine of the Immaculate Conception",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2026-08-03",
+    "endDate": "2026-08-06",
+    "title": "Knights of Columbus Supreme Convention",
+    "venue": "Gaylord Rockies Resort & Convention Center",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2026-07-21",
+    "time": "7:00 pm",
+    "title": "A Hymn in Stone",
+    "venue": "Basilica of the National Shrine of the Immaculate Conception",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2026-05-03",
+    "time": "5:00 pm",
+    "title": "Monteverdi Refracted",
+    "venue": "Westmoreland Congregational United Church of Christ",
+    "ensemble": "The Thirteen",
+    "url": "https://www.thethirteenchoir.org/",
+    "ensembleUrl": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2026-05-02",
+    "time": "7:30 pm",
+    "title": "Monteverdi Refracted",
+    "venue": "Holy Trinity Catholic Church, Chapel of St. Ignatius and Holy Trinity Offices",
+    "ensemble": "The Thirteen",
+    "url": "https://www.thethirteenchoir.org/",
+    "ensembleUrl": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2026-05-01",
+    "time": "7:30 pm",
+    "title": "Monteverdi Refracted",
+    "venue": "Trinity United Methodist Church",
+    "ensemble": "The Thirteen",
+    "url": "https://www.thethirteenchoir.org/",
+    "ensembleUrl": "https://www.thethirteenchoir.org"
+  },
+  {
+    "date": "2026-03-22",
+    "time": "3:00 pm",
+    "title": "Lenten Rose",
+    "venue": "St Dunstan's Episcopal Church",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2026-03-14",
+    "time": "8:00 pm",
+    "title": "Howells: Requiem",
+    "venue": "Church of the Ascension and Saint Agnes⛪",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2026-03-13",
+    "time": "8:00 pm",
+    "title": "Howells: Requiem",
+    "venue": "Christ Church, Georgetown",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2026-02-06",
+    "time": "7:00 pm",
+    "title": "Midwinter",
+    "venue": "St. Luke's Episcopal Church",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2026-01-31",
+    "time": "7:30 pm",
+    "title": "Rautavaara’s Vigilia",
+    "venue": "Westmoreland Congregational United Church of Christ",
+    "ensemble": "Epiphany Festival Chorus",
+    "url": "https://www.epiphanyfestival.org/"
+  },
+  {
+    "date": "2026-01-04",
+    "time": "3:00 pm",
+    "title": "Midwinter",
+    "venue": "Saint Bernard Catholic Church",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2025-12-20",
+    "time": "6:00 pm",
+    "title": "Follow the Star: Sacred Choral Music for the Christmas Season",
+    "venue": "Basilica of the National Shrine of the Immaculate Conception",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2025-12-14",
+    "time": "4:30 pm",
+    "title": "Radiant Light",
+    "venue": "Church of the Ascension and Saint Agnes⛪",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2025-12-12",
+    "time": "7:00 pm",
+    "title": "Radiant Light",
+    "venue": "St Andrew's Episcopal Church",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2025-12-07",
+    "time": "6:00 pm",
+    "title": "Handel's Messiah",
+    "venue": "Washington National Cathedral",
+    "ensemble": "Washington National Cathedral Choir",
+    "url": "https://cathedral.org/",
+    "ensembleUrl": "https://cathedral.org"
+  },
+  {
+    "date": "2025-12-06",
+    "time": "6:00 pm",
+    "title": "Handel's Messiah",
+    "venue": "Washington National Cathedral",
+    "ensemble": "Washington National Cathedral Choir",
+    "url": "https://cathedral.org/",
+    "ensembleUrl": "https://cathedral.org"
+  },
+  {
+    "date": "2025-12-06",
+    "time": "2:00 pm",
+    "title": "Handel's Messiah",
+    "venue": "Washington National Cathedral",
+    "ensemble": "Washington National Cathedral Choir",
+    "url": "https://cathedral.org/",
+    "ensembleUrl": "https://cathedral.org"
+  },
+  {
+    "date": "2025-12-06",
+    "time": "6:00 pm",
+    "title": "Handel's Messiah",
+    "venue": "Washington National Cathedral",
+    "ensemble": ""
+  },
+  {
+    "date": "2025-12-05",
+    "time": "7:00 pm",
+    "title": "Handel's Messiah",
+    "venue": "Washington National Cathedral",
+    "ensemble": ""
+  },
+  {
+    "date": "2025-12-05",
+    "time": "7:00 pm",
+    "title": "Handel's Messiah",
+    "venue": "Washington National Cathedral",
+    "ensemble": "Washington National Cathedral Choir",
+    "url": "https://cathedral.org/",
+    "ensembleUrl": "https://cathedral.org"
+  },
+  {
+    "date": "2025-11-02",
+    "time": "6:00 pm",
+    "title": "In the Company of Angels - Choral Meditations on All Souls",
+    "venue": "Basilica of the National Shrine of the Immaculate Conception",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2025-10-12",
+    "time": "4:00 pm",
+    "title": "Gems From a New Era",
+    "venue": "The Shrine of SS Peter and Paul",
+    "ensemble": "Mountainside Baroque",
+    "url": "https://www.mountainsidebaroque.org/"
+  },
+  {
+    "date": "2025-10-05",
+    "time": "3:00 pm",
+    "title": "Ars Populi in Concert",
+    "venue": "Calvary United Methodist Church",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2025-10-05",
+    "time": "7:00 pm",
+    "title": "Bach's Magnificat",
+    "venue": "Washington National Cathedral",
+    "ensemble": "Washington National Cathedral Choir",
+    "url": "https://cathedral.org/",
+    "ensembleUrl": "https://cathedral.org"
+  },
+  {
+    "date": "2025-09-28",
+    "time": "3:30 pm",
+    "title": "Palestrina 500",
+    "venue": "Cathedral of St. Thomas More",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2025-09-14",
+    "time": "3:00 pm",
+    "title": "The Road to Ferrara",
+    "venue": "Saint Bernadette Catholic Church",
+    "ensemble": "D.C. Singer Collective",
+    "url": "https://dcsingercollective.com/",
+    "ensembleUrl": "https://dcsingercollective.com"
+  },
+  {
+    "date": "2025-09-14",
+    "time": "7:00 pm",
+    "title": "Ends & Beginnings",
+    "venue": "Church of the Ascension and Saint Agnes⛪",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2025-05-30",
+    "time": "7:00 pm",
+    "title": "150th anniversary of the Feast of Our Lady of Mount Carmel",
+    "venue": "St. Mary of Mount Carmel Parish",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2025-05-17",
+    "time": "7:30 pm",
+    "title": "To the Hands",
+    "venue": "Church of the Ascension and Saint Agnes⛪",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2025-03-28",
+    "time": "7:30 pm",
+    "title": "A New Jerusalem",
+    "venue": "Westmoreland Congregational United Church of Christ",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2025-03-20",
+    "time": "7:00 pm",
+    "title": "Concerto di Musica Sacra",
+    "venue": "Basilica of San Pietro in Vincoli., Piazza di San Pietro in Vincoli",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2025-03-18",
+    "time": "8:30 pm",
+    "title": "Concerto di Musica Sacra",
+    "venue": "Papal Basilica of Saint Mary Major, P.za di Santa Maria Maggiore",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2025-03-11",
+    "time": "7:30 pm",
+    "title": "Lux & TUKS Camerata In Concert",
+    "venue": "St. Jerome Catholic Church",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2025-02-02",
+    "time": "2:00 pm",
+    "title": "Ars Populi in Concert",
+    "venue": "Alden Theatre",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2025-01-11",
+    "time": "7:30 pm",
+    "title": "Long, Long Ago",
+    "venue": "Church of the Ascension and Saint Agnes⛪",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2025-01-10",
+    "time": "7:30 pm",
+    "title": "Long, Long Ago",
+    "venue": "St. Jerome Catholic Church",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2024-12-21",
+    "time": "6:00 pm",
+    "title": "Amid the Silence",
+    "venue": "Basilica of the National Shrine of the Immaculate Conception",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2024-12-15",
+    "time": "4:00 pm",
+    "title": "Noel! Christmas with the Camerata",
+    "venue": "Church of the Epiphany",
+    "ensemble": "Washington Men's Camerata",
+    "url": "https://www.camerata.com/"
+  },
+  {
+    "date": "2024-12-14",
+    "time": "8:00 pm",
+    "title": "Noel! Christmas with the Camerata",
+    "venue": "St. Columba’s Episcopal Church",
+    "ensemble": "Washington Men's Camerata",
+    "url": "https://www.camerata.com/"
+  },
+  {
+    "date": "2024-12-13",
+    "time": "7:30 pm",
+    "title": "A Renaissance Christmas",
+    "venue": "The Mansion at Strathmore",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2024-12-12",
+    "time": "7:30 pm",
+    "title": "A Renaissance Christmas",
+    "venue": "The Mansion at Strathmore",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2024-11-14",
+    "time": "8:00 pm",
+    "title": "Byrd: Mass for Five Voices",
+    "venue": "St. Jerome Catholic Church",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2024-11-02",
+    "time": "6:00 pm",
+    "title": "Faire Is the Heaven: Choral Meditations on Life Eternal",
+    "venue": "Basilica of the National Shrine of the Immaculate Conception",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2024-10-25",
+    "time": "7:00 pm",
+    "title": "Centennial Concert",
+    "venue": "Holy Name of Jesus Cathedral",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2024-09-28",
+    "time": "7:00 pm",
+    "title": "Echoes of the Ancient",
+    "venue": "Holy Comforter Saint Cyprian Catholic Church⛪",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2024-09-22",
+    "time": "3:00 pm",
+    "title": "Genesis",
+    "venue": "St Andrew's Episcopal Church",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2024-09-21",
+    "time": "7:00 pm",
+    "title": "Genesis",
+    "venue": "Church of the Ascension and Saint Agnes⛪",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2024-08-05",
+    "endDate": "2024-08-08",
+    "title": "Knights of Columbus Supreme Convention",
+    "venue": "Fairmont Le Château Frontenac",
+    "ensemble": "Basilica of the National Shrine Choir",
+    "url": "https://www.nationalshrine.org/",
+    "ensembleUrl": "https://www.nationalshrine.org"
+  },
+  {
+    "date": "2024-04-21",
+    "time": "7:00 pm",
+    "title": "This is the Day: Sacred Music for Easter",
+    "venue": "St. Luke's Episcopal Church",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2024-03-22",
+    "time": "7:00 pm",
+    "title": "As the Lily : Songs of Springtime",
+    "venue": "St. Mark Presbyterian Memorial Memorial Garden",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
+  },
+  {
+    "date": "2024-03-02",
+    "time": "11:00 am",
+    "title": "Lux at ACDA",
+    "venue": "Grace Episcopal Church",
+    "ensemble": "Lux",
+    "url": "https://www.choirlux.com/"
+  },
+  {
+    "date": "2024-02-25",
+    "time": "2:00 pm",
+    "title": "Rare Lassus Masterpieces",
+    "venue": "Saint Mary, Mother of God Catholic Church",
+    "ensemble": "Chantry",
+    "url": "https://www.chantrydc.org/"
+  },
+  {
+    "date": "2024-01-21",
+    "time": "2:00 pm",
+    "title": "Gustav Holst: Beyond the Planets",
+    "venue": "Westmoreland Congregational United Church of Christ",
+    "ensemble": "Epiphany Festival Chorus",
+    "url": "https://www.epiphanyfestival.org/"
+  }
+]
