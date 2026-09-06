@@ -1,5 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    @font-face {
+      font-family: "Cormorant Icon";
+      font-style: normal;
+      font-weight: 500;
+      src: url("data:font/woff2;base64,d09GMgABAAAAAAPcABAAAAAAB1QAAAODAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbHhxkBmA/U1RBVEQAPBEICoMUgnQLCgABNgIkAxAEIAWEbgcgDAcbEgbIBJ7n3+v9tU8y02mS0mdQSMNCyhVzKyLtI78kfIr5v7VVd5DXqVSYDiFSG/vR2Y9rErdKKaKVeGLp+pVwIV/I/RbxLAY6g/K7HgEcFCYiqhBaghatWbeksxNmEMHs9AbBGLAUI5iA8XyX5WuqSuhQstQro7GcnDQhrWUYa5Vlx6CNUlK+vITIElHBjEnEGt74K8FULeVXQqD2qjncMp7dl0X04Qcc1SuoAPliHUKn8ieTJk/K8ASaccb5/78kPeZYaaWRU7sOblWVPKwxlq+NoIDGBpcoW5Vf4IlNXyz0lpaIg9AYc1RcSZ0rg59DQvJrDUBowGEMxGgeAMMXEhTVXVcXp4Kvg0ew0NI9CQLq4aJDA54CObxxCzGeAv8hphM2rbBjmnZHPbdWnfBaGwtbLLHFmhHXWTPFZkYLL+HMHm6G00aC3DfH7hdm2GT2rxTv22ztvX4ac/M71t7HZcsd9r7bzpyx970voS1nH7b2brH3vWvve3725nfeeWXQ8ZPNXn5fjEbyrGBD/91bLGz4w/Af6vXdMbpDUvs62SGpb/C9H0tmVuh0PBofvSiZSMZWZJNRf8f6nTF/uU7dF2se6+VOiVb6lStGt/ErfT25l9trx5xspkfUj7rpHjrm07rCcIw2H19o08ddvGZB/EzT+h0aN0599HXdtu0mzJ3b5pO1nZSj2iZVIrqMd5Kj6y9IjAp+jo6rv7j9xkV/tnmlS1w5qtVbOrasqXJU93VdAUBQfTH5wZC99uJ6w36LGMbbJP9y58YWL359Y3iT4Mz/34buMq4+R5sCGNjDzcGZ/6aG7jLeQV79zpTfWCS54HXJ0JGfNrH+8Ix3CE7I4eR74zRrs+h16ZdToY8oqqjLr9Qgy93rZj8N0ZLjNEwvVijrMoAenEQdYpTY0qbEkVqsjvQVTKOcUpZSxlg8Sb2EQpYzG7cynwI8JppshRyuoVR+2qOCaobQk56UGxmXMvKkaBkeEGovV+PSg3KqyCcVY6kEm8g8cpBD/bCMFXTfgM1iwSqqZej5q6YfPehFL3qn6kOZxGQmkVnq0mQay6dYMmIGcLuWNTWMDlawRjLiE9b0OVBnfzQzKMDlM5dkU1htOUW4LC/XjqYGj4J+Vk1zncinUK6tYRk9WP5kcj1JsbTFuhSTaDVZtLG6Z+om2PkvxaungvP0wal+VIId95oHAA==") format("woff2");
+    }
+  </style>
   <rect width="64" height="64" rx="8" fill="#fcfaf7"/>
   <rect x="2" y="2" width="60" height="60" rx="6" fill="none" stroke="#6e1f2e" stroke-width="2"/>
-  <text x="32" y="49" fill="#6e1f2e" font-family="Georgia, 'Times New Roman', serif" font-size="50" text-anchor="middle">J</text>
+  <text x="32" y="49" fill="#6e1f2e" font-family="Cormorant Icon, Garamond, serif" font-size="50" font-weight="500" text-anchor="middle">J</text>
 </svg>
