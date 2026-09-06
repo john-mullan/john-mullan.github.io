@@ -1,27 +1,61 @@
-name: Update schedule from Google Calendar
+name: Deploy site and update schedule
 
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: "23 9 * * *"   # daily, 09:23 UTC (early morning US Eastern)
   workflow_dispatch: {}     # allows manual "Run workflow" from the Actions tab
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
-  update:
+  deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      ICS_URL: ${{ secrets.WEBSITE_ICS_URL }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
+        if: github.event_name != 'push' && env.ICS_URL != ''
         with:
           python-version: "3.12"
+
       - name: Regenerate events.json
-        env:
-          ICS_URL: ${{ secrets.WEBSITE_ICS_URL }}
+        if: github.event_name != 'push' && env.ICS_URL != ''
         run: python scripts/ics_to_events.py
+
       - name: Commit and push if changed
+        if: github.event_name != 'push' && env.ICS_URL != ''
         run: |
           git config user.name "schedule-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add events.json
           git diff --cached --quiet || { git commit -m "Update schedule from calendar"; git push; }
+
+      - name: Note missing calendar configuration
+        if: github.event_name != 'push' && env.ICS_URL == ''
+        run: echo "::notice::WEBSITE_ICS_URL is not configured; deploying the existing schedule."
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
