@@ -7,6 +7,7 @@ const CALENDAR_NAME = "Website";
 const WEBSITE_MARKER = "--- Website ---";
 const HISTORY_START_YEAR = 2000;
 const LOOK_AHEAD_DAYS = 1095;
+const SWEEP_INTERVAL_MINUTES = 5;
 
 function setUp() {
   const matches = CalendarApp.getOwnedCalendarsByName(CALENDAR_NAME);
@@ -21,12 +22,19 @@ function setUp() {
   PropertiesService.getScriptProperties().setProperty("WEBSITE_CALENDAR_ID", calendarId);
 
   ScriptApp.getProjectTriggers()
-    .filter(trigger => trigger.getHandlerFunction() === "calendarChanged")
+    .filter(trigger => ["calendarChanged", "scheduledSweep"].includes(
+      trigger.getHandlerFunction()
+    ))
     .forEach(trigger => ScriptApp.deleteTrigger(trigger));
 
   ScriptApp.newTrigger("calendarChanged")
     .forUserCalendar(calendarId)
     .onEventUpdated()
+    .create();
+
+  ScriptApp.newTrigger("scheduledSweep")
+    .timeBased()
+    .everyMinutes(SWEEP_INTERVAL_MINUTES)
     .create();
 
   const updated = addMissingScaffolds_();
@@ -35,6 +43,15 @@ function setUp() {
 
 function calendarChanged() {
   addMissingScaffolds_();
+}
+
+function scheduledSweep() {
+  addMissingScaffolds_();
+}
+
+function runNow() {
+  const updated = addMissingScaffolds_();
+  console.log("Added metadata fields to " + updated + " event(s).");
 }
 
 function addMissingScaffolds_() {

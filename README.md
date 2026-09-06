@@ -45,8 +45,9 @@ Three ways, from most to least automatic:
    `scripts/google_calendar_scaffold.gs` installs a Google Apps Script trigger
    that automatically adds blank `ensemble:` and `details:` lines to new or
    edited events on the Website calendar, including historical events back to
-   2000. Ensemble websites are filled from `ensembles.json`; `ensembleUrl:`
-   remains available as a per-event override.
+   2000. A five-minute sweep provides a fallback when Google's calendar-change
+   notification is delayed. Ensemble websites are filled from `ensembles.json`;
+   `ensembleUrl:` remains available as a per-event override.
 
    Entries named with "not confirmed", "tentative", "hold", or "?" are skipped,
    as is any entry with a lone line "skip" or "private" in its description.
