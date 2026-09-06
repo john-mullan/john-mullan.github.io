@@ -7,7 +7,8 @@ schedule, in the same visual language as the performance resume.
 
 ```
 index.html      the whole site (styles and scripts inline)
-events.json     the schedule data — the only file that changes routinely
+events.json     generated schedule data
+ensembles.json  reusable ensemble-name → website mapping
 audio/          recordings (m4a, remuxed with faststart for streaming)
 img/            headshot
 resume.pdf      downloadable performance resume
@@ -37,10 +38,15 @@ Three ways, from most to least automatic:
    ```
    title: Evensong with The Thirteen     ← public title, if the entry name is shorthand
    ensemble: The Thirteen
-   ensembleUrl: https://www.thethirteenchoir.org
    tickets: https://example.com/tickets
    venue: Washington National Cathedral  ← overrides the location field
    ```
+
+   `scripts/google_calendar_scaffold.gs` installs a Google Apps Script trigger
+   that automatically adds blank `ensemble:` and `details:` lines to new or
+   edited events on the Website calendar, including historical events back to
+   2000. Ensemble websites are filled from `ensembles.json`; `ensembleUrl:`
+   remains available as a per-event override.
 
    Entries named with "not confirmed", "tentative", "hold", or "?" are skipped,
    as is any entry with a lone line "skip" or "private" in its description.

@@ -26,6 +26,20 @@ from zoneinfo import ZoneInfo
 
 LOCAL_TZ = ZoneInfo(os.environ.get("SITE_TZ", "America/New_York"))
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "events.json")
+ENSEMBLES = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "ensembles.json")
+
+
+def load_ensemble_urls():
+    try:
+        with open(ENSEMBLES, encoding="utf-8") as f:
+            entries = json.load(f)
+    except (OSError, ValueError):
+        return {}
+    return {re.sub(r"\s+", " ", name).strip().casefold(): url
+            for name, url in entries.items() if isinstance(url, str) and url.strip()}
+
+
+ENSEMBLE_URLS = load_ensemble_urls()
 
 
 def unfold(text):
@@ -123,6 +137,10 @@ def parse_events(ics_text):
             else:  # tickets / url / details
                 event["url"] = val
         event.setdefault("ensemble", "")
+        if event["ensemble"] and not event.get("ensembleUrl"):
+            key = re.sub(r"\s+", " ", event["ensemble"]).strip().casefold()
+            if key in ENSEMBLE_URLS:
+                event["ensembleUrl"] = ENSEMBLE_URLS[key]
         event.setdefault("venue", "")
         out.append(event)
     out.sort(key=lambda e: e["date"], reverse=True)
