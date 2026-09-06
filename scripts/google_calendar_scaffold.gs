@@ -56,18 +56,15 @@ function setUp() {
 
 function calendarChanged() {
   addMissingScaffolds_();
-  refreshBulkEditorIfPresent_();
 }
 
 function scheduledSweep() {
   addMissingScaffolds_();
-  const result = applyBulkEdits_(false);
-  if (result.updated) refreshBulkEditorIfPresent_();
+  applyBulkEdits_(false);
 }
 
 function runNow() {
   const updated = addMissingScaffolds_();
-  refreshBulkEditorIfPresent_();
   console.log("Added metadata fields to " + updated + " event(s).");
 }
 
@@ -176,16 +173,6 @@ function getBulkEditor_(required) {
   } catch (error) {
     if (required) throw new Error("The bulk editor spreadsheet is unavailable.");
     return null;
-  }
-}
-
-function refreshBulkEditorIfPresent_() {
-  const spreadsheet = getBulkEditor_(false);
-  if (!spreadsheet) return;
-  try {
-    refreshBulkEditor_(spreadsheet);
-  } catch (error) {
-    console.error("Could not refresh the bulk editor: " + error.message);
   }
 }
 

@@ -59,9 +59,9 @@ Three ways, from most to least automatic:
    to publish. The five-minute sweep writes checked rows back to Calendar, or
    select `applyBulkEdits` and click **Run** for an immediate update. Calendar
    dates, titles, and locations are shown as shaded reference columns; continue
-   editing those fields in Google Calendar. New Calendar events are added to
-   the sheet automatically, and `refreshBulkEditor` is available for a manual
-   refresh.
+   editing those fields in Google Calendar. Run `refreshBulkEditor` when you
+   want to pull newly created Calendar events into the sheet; pending checked
+   rows are preserved during a refresh.
 
    Entries named with "not confirmed", "tentative", "hold", or "?" are skipped,
    as is any entry with a lone line "skip" or "private" in its description.
