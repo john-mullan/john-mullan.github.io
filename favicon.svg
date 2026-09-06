@@ -9,5 +9,5 @@
   </style>
   <rect width="64" height="64" rx="8" fill="#6e1f2e"/>
   <rect x="2" y="2" width="60" height="60" rx="6" fill="none" stroke="#fcfaf7" stroke-width="2"/>
-  <text x="32" y="49" fill="#fcfaf7" font-family="Cormorant Icon, Garamond, serif" font-size="50" font-weight="500" text-anchor="middle">J</text>
+  <text x="32" y="46" fill="#fcfaf7" font-family="Cormorant Icon, Garamond, serif" font-size="50" font-weight="500" text-anchor="middle">J</text>
 </svg>
