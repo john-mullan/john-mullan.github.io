@@ -312,6 +312,13 @@
     "time": "6:00 pm",
     "title": "Handel's Messiah",
     "venue": "Washington National Cathedral",
+    "ensemble": ""
+  },
+  {
+    "date": "2025-12-06",
+    "time": "6:00 pm",
+    "title": "Handel's Messiah",
+    "venue": "Washington National Cathedral",
     "ensemble": "Washington National Cathedral Choir",
     "url": "https://cathedral.org/",
     "ensembleUrl": "https://cathedral.org"
@@ -324,13 +331,6 @@
     "ensemble": "Washington National Cathedral Choir",
     "url": "https://cathedral.org/",
     "ensembleUrl": "https://cathedral.org"
-  },
-  {
-    "date": "2025-12-06",
-    "time": "6:00 pm",
-    "title": "Handel's Messiah",
-    "venue": "Washington National Cathedral",
-    "ensemble": ""
   },
   {
     "date": "2025-12-05",
@@ -367,21 +367,21 @@
   },
   {
     "date": "2025-10-05",
-    "time": "3:00 pm",
-    "title": "Ars Populi in Concert",
-    "venue": "Calvary United Methodist Church",
-    "ensemble": "Ars Populi",
-    "url": "https://www.ars-populi-music.com/",
-    "ensembleUrl": "https://www.ars-populi-music.com"
-  },
-  {
-    "date": "2025-10-05",
     "time": "7:00 pm",
     "title": "Bach's Magnificat",
     "venue": "Washington National Cathedral",
     "ensemble": "Washington National Cathedral Choir",
     "url": "https://cathedral.org/",
     "ensembleUrl": "https://cathedral.org"
+  },
+  {
+    "date": "2025-10-05",
+    "time": "3:00 pm",
+    "title": "Ars Populi in Concert",
+    "venue": "Calvary United Methodist Church",
+    "ensemble": "Ars Populi",
+    "url": "https://www.ars-populi-music.com/",
+    "ensembleUrl": "https://www.ars-populi-music.com"
   },
   {
     "date": "2025-09-28",
