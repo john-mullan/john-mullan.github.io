@@ -316,6 +316,22 @@
   },
   {
     "date": "2025-12-06",
+    "time": "6:00 pm",
+    "title": "Handel's Messiah",
+    "venue": "Washington National Cathedral",
+    "ensemble": "Washington National Cathedral Choir",
+    "url": "https://cathedral.org/",
+    "ensembleUrl": "https://cathedral.org"
+  },
+  {
+    "date": "2025-12-06",
+    "time": "6:00 pm",
+    "title": "Handel's Messiah",
+    "venue": "Washington National Cathedral",
+    "ensemble": ""
+  },
+  {
+    "date": "2025-12-06",
     "time": "2:00 pm",
     "title": "Handel's Messiah",
     "venue": "Washington National Cathedral",
@@ -324,20 +340,11 @@
     "ensembleUrl": "https://cathedral.org"
   },
   {
-    "date": "2025-12-06",
-    "time": "6:00 pm",
+    "date": "2025-12-05",
+    "time": "7:00 pm",
     "title": "Handel's Messiah",
     "venue": "Washington National Cathedral",
     "ensemble": ""
-  },
-  {
-    "date": "2025-12-06",
-    "time": "6:00 pm",
-    "title": "Handel's Messiah",
-    "venue": "Washington National Cathedral",
-    "ensemble": "Washington National Cathedral Choir",
-    "url": "https://cathedral.org/",
-    "ensembleUrl": "https://cathedral.org"
   },
   {
     "date": "2025-12-05",
@@ -347,13 +354,6 @@
     "ensemble": "Washington National Cathedral Choir",
     "url": "https://cathedral.org/",
     "ensembleUrl": "https://cathedral.org"
-  },
-  {
-    "date": "2025-12-05",
-    "time": "7:00 pm",
-    "title": "Handel's Messiah",
-    "venue": "Washington National Cathedral",
-    "ensemble": ""
   },
   {
     "date": "2025-11-02",
